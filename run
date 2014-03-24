@@ -1,2 +1,3 @@
 #!/bin/sh
+chmod -R redis:redis /var/lib/redis
 exec sudo -u redis /usr/bin/redis-server /etc/redis/redis.conf
