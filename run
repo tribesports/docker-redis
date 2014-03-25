@@ -1,3 +1,4 @@
 #!/bin/sh
-chown -R redis:redis /var/lib/redis
+mkdir -p /var/lib/redis/data
+chown -R redis:redis /var/lib/redis/data
 exec sudo -u redis /usr/bin/redis-server /etc/redis/redis.conf
