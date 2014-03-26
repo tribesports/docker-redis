@@ -7,6 +7,7 @@ RUN apt-get update -qq
 RUN apt-get install -y python-software-properties sudo
 RUN apt-get install -y ts-redis
 ADD run /usr/local/bin/run
+ADD redis.conf /etc/redis/redis.conf
 EXPOSE 6379
 VOLUME ["/var/lib/redis"]
 CMD ["/usr/local/bin/run"]
